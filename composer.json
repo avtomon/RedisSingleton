@@ -13,23 +13,11 @@
     },
     "repositories": [
         {
-            "type": "package",
-            "package": {
-                "name": "phpredis/phpredis",
-                "type": "extension",
-                "version": "*",
-                "source": {
-                    "url": "https://github.com/phpredis/phpredis.git",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
-        },
-        {
-            "packagist": false
+            "type": "pecl",
+            "url": "https://pecl.php.net"
         }
     ],
     "require": {
-        "phpredis/phpredis": "*"
+        "pear-pecl.php.net/redis": "*",
     }
 }
