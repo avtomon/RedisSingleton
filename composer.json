@@ -11,14 +11,7 @@
             "avtomon\\": "src/"
         }
     },
-    "repositories": [
-        {
-            "type": "pear",
-            "url": "https://pecl.php.net",
-            "vendor-alias": "pecl"
-        }
-    ],
     "require": {
-        "pecl/redis": "*"
+        "ext-redis": "*"
     }
 }
