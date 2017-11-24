@@ -13,7 +13,7 @@
     },
     "repositories": [
         {
-            "type": "pecl",
+            "type": "pear",
             "url": "https://pecl.php.net"
         }
     ],
