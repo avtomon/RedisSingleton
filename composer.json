@@ -18,6 +18,6 @@
         }
     ],
     "require": {
-        "pear-pecl.php.net/redis": "*"
+        "pear-pecl.php.net/package/redis": "*"
     }
 }
