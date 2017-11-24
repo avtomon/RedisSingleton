@@ -14,10 +14,11 @@
     "repositories": [
         {
             "type": "pear",
-            "url": "https://pecl.php.net"
+            "url": "https://pecl.php.net",
+            "vendor-alias": "pecl"
         }
     ],
     "require": {
-        "pear-pecl/redis": "*"
+        "pecl/redis": "*"
     }
 }
