@@ -1,0 +1,35 @@
+{
+    "name": "avtomon/RedisSingleton",
+    "description": "Singleton for phpredis extension",
+    "type": "project",
+    "minimum-stability": "dev",
+    "config": {
+        "process-timeout": 1800
+    },
+    "autoload": {
+        "psr-4": {
+            "avtomon\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "phpredis/phpredis",
+                "type": "extension",
+                "version": "*",
+                "source": {
+                    "url": "https://github.com/phpredis/phpredis.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        },
+        {
+            "packagist": false
+        }
+    ],
+    "require": {
+        "phpredis/phpredis": "*"
+    }
+}
