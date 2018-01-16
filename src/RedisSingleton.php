@@ -20,6 +20,7 @@ class RedisSingleton
                 throw new RedisSingletonException ('Не удалось подключиться к сокету Redis');
             }
         }
+
         return self::$instance;
     }
 }
