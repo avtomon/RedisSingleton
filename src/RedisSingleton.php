@@ -10,7 +10,7 @@ class RedisSingleton
 {
     private static $instance = null;
 
-    public static function create($socket = '/var/run/redis.sock')
+    public static function create($socket = '/var/run/redis.sock'): \Redis
     {
         if (!self::$instance) {
             $redis = new \Redis();
