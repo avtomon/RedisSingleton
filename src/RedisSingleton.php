@@ -13,7 +13,7 @@ class RedisSingleton
      *
      * @var array
      */
-    private static $instances = [];
+    protected static $instances = [];
 
     /**
      * Синглтон создания объекта подключения к Redis
