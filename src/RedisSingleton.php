@@ -2,7 +2,7 @@
 
 namespace avtomon;
 
-class RedisSingletonException extends \Exception
+class RedisSingletonException extends CustomException
 {
 }
 
