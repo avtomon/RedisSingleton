@@ -1,7 +1,6 @@
 {
     "name": "avtomon/RedisSingleton",
     "description": "Singleton for phpredis extension",
-    "type": "project",
     "minimum-stability": "dev",
     "config": {
         "process-timeout": 1800

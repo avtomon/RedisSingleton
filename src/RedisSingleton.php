@@ -1,11 +1,22 @@
 <?php
 
 namespace avtomon;
-
+/**
+ * Класс ошибок
+ *
+ * Class RedisSingletonException
+ * @package avtomon
+ */
 class RedisSingletonException extends CustomException
 {
 }
 
+/**
+ * Синглтон для Redis
+ *
+ * Class RedisSingleton
+ * @package avtomon
+ */
 class RedisSingleton
 {
     /**
@@ -20,9 +31,10 @@ class RedisSingleton
      *
      * @param string $hostOrSocket - хост или Unix-сокет
      * @param int $port - порт подключения
-     * @param float $timeout
+     *
+     * @param float $timeout - время хранения записей
      * @param null $reserved
-     * @param int $retry_interval
+     * @param int $retryInterval - интервал попыток переподключения
      *
      * @return \Redis
      *
