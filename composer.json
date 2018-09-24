@@ -1,13 +1,9 @@
 {
-    "name": "avtomon/RedisSingleton",
+    "name": "scaleplan/redis-singleton",
     "description": "Singleton for phpredis extension",
-    "minimum-stability": "dev",
-    "config": {
-        "process-timeout": 1800
-    },
     "autoload": {
         "psr-4": {
-            "avtomon\\": "src/"
+            "Scaleplan\\Redis\\": "src/"
         }
     },
     "require": {
