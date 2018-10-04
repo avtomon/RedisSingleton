@@ -1,21 +1,15 @@
 <?php
 
-namespace avtomon;
-/**
- * Класс ошибок
- *
- * Class RedisSingletonException
- * @package avtomon
- */
-class RedisSingletonException extends CustomException
-{
-}
+namespace Scaleplan\Redis;
+
+use Scaleplan\Redis\Exceptions\RedisSingletonException;
 
 /**
  * Синглтон для Redis
  *
  * Class RedisSingleton
- * @package avtomon
+ *
+ * @package Scaleplan\Redis
  */
 class RedisSingleton
 {
