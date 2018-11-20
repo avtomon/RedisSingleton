@@ -41,16 +41,16 @@ class RedisSingleton
         $reserved = null,
         int $retryInterval = 0): \Redis
     {
-        if (empty(self::$instances[$hostOrSocket])) {
+        if (empty(static::$instances[$hostOrSocket])) {
             $redis = new \Redis();
             if ($redis->connect($hostOrSocket, $port, $timeout, $reserved, $retryInterval)) {
-                self::$instances[$hostOrSocket] = $redis;
+                static::$instances[$hostOrSocket] = $redis;
             } else {
                 throw new RedisSingletonException ("Не удалось подключиться к хосту/сокету $hostOrSocket");
             }
         }
 
-        return self::$instances[$hostOrSocket];
+        return static::$instances[$hostOrSocket];
     }
 
 
