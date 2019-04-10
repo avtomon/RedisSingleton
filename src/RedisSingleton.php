@@ -35,7 +35,7 @@ class RedisSingleton
      * @throws RedisSingletonException
      */
     public static function create(
-        string $hostOrSocket = '/var/run/redis.sock',
+        string $hostOrSocket = '/var/run/redis/redis.sock',
         int $port = 0,
         float $timeout = 0.0,
         $reserved = null,
