@@ -39,7 +39,7 @@ class RedisSingleton
         int $port = 0,
         float $timeout = 0.0,
         $reserved = null,
-        int $retryInterval = 0): \Redis
+        int $retryInterval = 0) : \Redis
     {
         if (empty(static::$instances[$hostOrSocket])) {
             $redis = new \Redis();
@@ -52,6 +52,4 @@ class RedisSingleton
 
         return static::$instances[$hostOrSocket];
     }
-
-
 }
