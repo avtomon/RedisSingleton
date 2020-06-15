@@ -9,7 +9,7 @@ namespace Scaleplan\Redis\Exceptions;
  */
 class RedisSingletonException extends \Exception
 {
-    public const MESSAGE = 'Redis error.';
+    public const MESSAGE = 'Ошибка модуля Redis.';
     public const CODE = 500;
 
     /**

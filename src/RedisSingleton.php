@@ -46,7 +46,7 @@ class RedisSingleton
             if ($redis->connect($hostOrSocket, $port, $timeout, $reserved, $retryInterval)) {
                 static::$instances[$hostOrSocket] = $redis;
             } else {
-                throw new RedisSingletonException ("Не удалось подключиться к хосту/сокету $hostOrSocket");
+                throw new RedisSingletonException ("Не удалось подключиться к хосту/сокету $hostOrSocket.");
             }
         }
 
