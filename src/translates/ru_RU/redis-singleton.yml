@@ -1,0 +1,2 @@
+connect-failed: Не удалось подключиться к хосту/сокету :host-or-socket.
+redis-error: Ошибка Redis.

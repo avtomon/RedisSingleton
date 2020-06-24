@@ -3,6 +3,7 @@
 namespace Scaleplan\Redis;
 
 use Scaleplan\Redis\Exceptions\RedisSingletonException;
+use function Scaleplan\Translator\translate;
 
 /**
  * Синглтон для Redis
@@ -25,7 +26,6 @@ class RedisSingleton
      *
      * @param string $hostOrSocket - хост или Unix-сокет
      * @param int $port - порт подключения
-     *
      * @param float $timeout - время хранения записей
      * @param null $reserved
      * @param int $retryInterval - интервал попыток переподключения
@@ -33,6 +33,11 @@ class RedisSingleton
      * @return \Redis
      *
      * @throws RedisSingletonException
+     * @throws \ReflectionException
+     * @throws \Scaleplan\DependencyInjection\Exceptions\ContainerTypeNotSupportingException
+     * @throws \Scaleplan\DependencyInjection\Exceptions\DependencyInjectionException
+     * @throws \Scaleplan\DependencyInjection\Exceptions\ParameterMustBeInterfaceNameOrClassNameException
+     * @throws \Scaleplan\DependencyInjection\Exceptions\ReturnTypeMustImplementsInterfaceException
      */
     public static function create(
         string $hostOrSocket = '/var/run/redis/redis.sock',
@@ -46,7 +51,9 @@ class RedisSingleton
             if ($redis->connect($hostOrSocket, $port, $timeout, $reserved, $retryInterval)) {
                 static::$instances[$hostOrSocket] = $redis;
             } else {
-                throw new RedisSingletonException ("Не удалось подключиться к хосту/сокету $hostOrSocket.");
+                throw new RedisSingletonException(
+                    translate('redis-singleton.connect-failed', ['host-or-socket' => $hostOrSocket,])
+                );
             }
         }
 

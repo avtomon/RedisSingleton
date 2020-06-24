@@ -1,0 +1,2 @@
+connect-failed: Connect to Redis host/socket :host-or-socket failed.
+redis-error: Redis error.
